@@ -1,0 +1,121 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  background-color: #171717;
+  color: #f1f1f1;
+}
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.frame-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.frame {
+  border-radius: 20px;
+  width: 300px;
+  height: 250px;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.front {
+  background-color: #222;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  z-index: 1;
+}
+.front div {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front img {
+  height: 60%;
+  display: block;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.front h2 {
+  margin-top: 5px;
+}
+.back {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  opacity: 0;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.back p {
+  font-size: 12px;
+  padding: 10px;
+  color: #171717;
+}
+.back a {
+  display: inline-block;
+  width: 120px;
+  font-size: 14px;
+  padding: 6px 12px;
+  color: #f1f1f1;
+  border-radius: 20px;
+  background-color: rgb(23, 75, 134);
+  transition: 0.3s;
+}
+.back a:hover {
+  background-color: rgb(24, 24, 24);
+}
+.frame:hover .front {
+  top: -50%;
+  opacity: 1;
+  border-radius: 5px 5px 0 0;
+  background-color: yellowgreen;
+}
+.frame:hover .back {
+  top: 50%;
+  background-color: #fff;
+  opacity: 1;
+}
+.frame:hover .front img {
+  animation: zoominout 1s linear infinite;
+}
+
+@keyframes zoominout {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
