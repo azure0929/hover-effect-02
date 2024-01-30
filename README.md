@@ -1,4 +1,4 @@
-## 'hover effect-02'
+## '지역 소개 - Flex&@keyframe zoom'
 
 <br>
 
@@ -46,7 +46,7 @@ Environment
 
 ---
 
-- flex, @keyframe zoominout
+- flex, @keyframe zoom in/out
 
 ```html
 <div class="frame">
